@@ -1,10 +1,5 @@
-//Logo
-import logoImg from '../../../../shared/assets/img/logo.svg'
-import totalImg from '../../../../shared/assets/img/total.svg'
-import arrowUpImg from '../../../../shared/assets/img/arrow-up.svg'
-import rentImg from '../../../../shared/assets/img/rent.svg'
-import arrowDownImg from '../../../../shared/assets/img/arrow-down-purple.svg'
-import menuImg from '../../../../shared/assets/img/menu.svg'
+// Images
+import { logoImg, totalImg, arrowUpImg, rentImg, arrowDownImg, menuImg } from '../../../../shared/assets/img/index'
 
 // Styles
 import { Container } from './styles'

@@ -1,10 +1,13 @@
 import { Header } from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
 
 export function FixedIncomePage(){
   return (
     <div>
       <Header />
-      FixedIncomePage
+      <main>
+        <Sidebar />
+      </main>
     </div>
   )
 }
