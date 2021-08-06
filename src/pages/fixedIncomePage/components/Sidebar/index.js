@@ -21,7 +21,7 @@ export function Sidebar (){
           <img src={resumeImg} alt=""/>
           <div>
             <p>Resumo <br />Da Carteira</p>
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </div>
         </li>
 
@@ -29,7 +29,7 @@ export function Sidebar (){
           <img src={productsImg} alt=""/>
           <div>
             <p>Meus <br />Produtos</p>
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </div>
         </li>
 
@@ -37,15 +37,15 @@ export function Sidebar (){
           <img src={earningsImg}alt=""/>
           <div>
             <p>Meus <br />Proventos</p>
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </div>
         </li>
 
-        <li class="dropdown">
+        <li className="dropdown">
             <img src={classesImg} alt=""/>
             <div>
               <p>Classe <br />De Ativos</p>
-              <i class="fas fa-chevron-right"></i>
+              <i className="fas fa-chevron-right"></i>
             </div>
           {/* <div class="dropdown-content">
             <ul>
@@ -61,7 +61,7 @@ export function Sidebar (){
           <img src={realRentImg} alt=""/>
           <div>
             <p>Rentabilidade <br />Real</p>
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </div>
         </li>
 
@@ -69,7 +69,7 @@ export function Sidebar (){
           <img src={projectionImg} alt=""/>
           <div>
             <p>Projeção <br />Da Carteira</p>
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </div>
         </li>
 
@@ -77,7 +77,7 @@ export function Sidebar (){
           <img src={returnImg} alt=""/>
           <div>
             <p>Risco <br />x Retorno</p>
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </div>
         </li>
 
@@ -85,7 +85,7 @@ export function Sidebar (){
           <img src={fgcImg} alt=""/>
           <div>
             <p>Cobertura <br />Do FGC</p>
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </div>
         </li>
       </ul>

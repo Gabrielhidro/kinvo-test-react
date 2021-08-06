@@ -1,46 +1,59 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Card, Container } from "./styles";
 
 export function FixedIncomeCards(){
-let card = [
-  {
-    saldo: 'saldo',
-    valor: 1209898,
-  },
-  {
-    saldo: 'saldo2',
-    valor: 1209898,
-  },
-  {
-    saldo: 'saldo3',
-    valor: 1209898,
-  },
-  {
-    saldo: 'saldo4',
-    valor: 1209898,
-  },
-  {
-    saldo: 'saldo5',
-    valor: 1209898,
-  },
-  {
-    saldo: 'saldo6',
-    valor: 1209898,
-  }
-]
 
+  const [ data, setData ] = useState([])
+  
+  useEffect(() => {
+    axios.get(`https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData`)
+    .then(response => {
+      const snapshotDatas = response.data.data.snapshotByPortfolio;
+      setData(snapshotDatas)
+    })
+  }, [])
 
-return (
-
+  
+  
+  return (
     <Container>
-        {card.map(item => (
-            <Card>
-              <div>
-                <p>{item.saldo}</p>
-                <h2>{item.valor}</h2>
-              </div>
-            </Card>
-          )
-        )}
+        <Card>
+          <div>
+            <p>SALDO BRUTO</p>
+            <h2>{data.equity}</h2>
+          </div>
+        </Card>
+        <Card>
+          <div>
+            <p>VALOR APLICADO</p>
+            <h2>{data.valueApplied}</h2>
+          </div>
+        </Card>
+        <Card>
+          <div>
+            <p>RESULTADO</p>
+            <h2>{data.equityProfit}</h2>
+          </div>
+        </Card>
+        <Card>
+          <div>
+            <p>RENTABILIDADE</p>
+            <h2>{data.percentageProfit}</h2>
+          </div>
+        </Card>
+        <Card>
+          <div>
+            <p>CDI</p>
+            <h2>{data.indexerValue}</h2>
+          </div>
+        </Card>
+        <Card>
+          <div>
+            <p>% SOBRE CDI</p>
+            <h2>{data.percentageOverIndexer}</h2>
+          </div>
+        </Card>
     </Container>
   )
 }
