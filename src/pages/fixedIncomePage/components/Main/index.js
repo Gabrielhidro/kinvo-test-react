@@ -1,7 +1,7 @@
 import { FixedIncomeCards } from "./FixedIncomeCards";
 import { Container } from "./styles";
-import axios from 'axios';
-import { useEffect, useState } from "react";
+import { RentGraphic } from "./RentGraphic";
+import { FixedIncomeSection } from "./FixedIncomeSection";
 
 export function Main(){
 
@@ -9,6 +9,8 @@ export function Main(){
     <Container>
       <h1>Renda Fixa</h1>
       <FixedIncomeCards />
+      <RentGraphic />
+      <FixedIncomeSection />
     </Container>
   )
 }
