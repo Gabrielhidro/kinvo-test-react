@@ -13,3 +13,5 @@ export { default as  realRentImg } from './real-rent.svg'
 export { default as  projectionImg } from './projection.svg'
 export { default as  returnImg } from './return.svg'
 export { default as  fgcImg } from './fgc.svg'
+
+export { default as  infoImg } from './info.svg'
