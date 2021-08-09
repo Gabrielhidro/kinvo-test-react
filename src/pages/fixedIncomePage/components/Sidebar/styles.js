@@ -28,6 +28,10 @@ export const Container = styled.aside`
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        p, i {
+          color: var(--text);
+        }
       }
     }
   }

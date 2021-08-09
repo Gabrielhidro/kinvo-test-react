@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Container, Content } from "./styles";
 import { infoImg } from '../../../../../../shared/assets/img'
+import { useSearch } from "../../../../../../context";
 
 export function Main(){
   
@@ -15,11 +16,13 @@ export function Main(){
     })
   }, [])
 
-  const dados = data.map(item => item)
+  const { search } = useSearch()
+
+  const filteredProducts = data.filter((e) => e.fixedIncome.name.toUpperCase().includes(search.toUpperCase()))
 
   return(
     <>
-      {dados.map(item => (
+      {filteredProducts.map(item => (
         <Container key={item.fixedIncome.portfolioProductId}>
           <Content>
             <div className="header">

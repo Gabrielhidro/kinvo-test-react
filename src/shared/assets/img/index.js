@@ -15,3 +15,4 @@ export { default as  returnImg } from './return.svg'
 export { default as  fgcImg } from './fgc.svg'
 
 export { default as  infoImg } from './info.svg'
+export { default as  searchImg } from './search.svg'

@@ -1,11 +1,14 @@
+import { SearchProvider } from "../context";
 import { FixedIncomePage } from "../pages/fixedIncomePage";
 import { GlobalStyle } from "../shared/styles/global";
 
 function App() {
   return (
     <div className="App">
-      <FixedIncomePage />
-      <GlobalStyle />
+      <SearchProvider>
+        <FixedIncomePage />
+        <GlobalStyle />
+      </SearchProvider>
     </div>
   );
 }
