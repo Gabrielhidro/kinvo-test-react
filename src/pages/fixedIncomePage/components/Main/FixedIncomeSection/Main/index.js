@@ -5,20 +5,12 @@ import { infoImg } from '../../../../../../shared/assets/img'
 import { useSearch } from "../../../../../../context";
 
 export function Main(){
-  
-  const [ data, setData ] = useState([])
-  
-  useEffect(() => {
-    axios.get(`https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData`)
-    .then(response => {
-      const snapshotDatas = response.data.data.snapshotByProduct;
-      setData(snapshotDatas)
-    })
-  }, [])
 
-  const { search } = useSearch()
+  const { search, order, handleSort, data } = useSearch()
+  const ord =  (a, b) => { return a.fixedIncome.name > b.fixedIncome.name ? 1 : -1; }
 
-  const filteredProducts = data.filter((e) => e.fixedIncome.name.toUpperCase().includes(search.toUpperCase()))
+  // const filteredProducts = data.filter((e) => e.fixedIncome.name.toUpperCase().includes(search.toUpperCase())).sort(order)
+  const filteredProducts = data.filter((e) => e.fixedIncome.name.toUpperCase().includes(search.toUpperCase())).sort(handleSort);
 
   return(
     <>

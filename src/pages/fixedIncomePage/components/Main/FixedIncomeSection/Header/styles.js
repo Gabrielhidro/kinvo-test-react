@@ -19,6 +19,7 @@ export const Container = styled.header`
       background: white;
       border: 1px solid #D6D9DD;
       border-radius: 10px;
+      color: var(--text);
 
       outline: none;
     }
@@ -34,6 +35,7 @@ export const Container = styled.header`
 
       border: 1px solid #D6D9DD;
       border-radius: 10px;
+      color: var(--text);
 
       outline: none;
       }

@@ -4,14 +4,16 @@ import { useSearch } from "../../../../../../context";
 
 export function Header (){
 
-  const { search, handleSearch } = useSearch()
+  const { order, search, handleSearch, handleOrder } = useSearch()
 
   return (
     <Container>
       <h1>Minhas Rendas Fixas</h1>
       <div>
-        <select name="" id="">
-          <option value="1">1</option>
+        <select id="orderByName" onChange={handleOrder}>
+          <option value="random">Ordenar por</option>
+          <option value="a">A-Z</option>
+          <option value="z">Z-A</option>
         </select>
         <div>
           <input type="text" onChange={handleSearch} value={search} />
