@@ -9,7 +9,7 @@ export const Container = styled.aside`
 
 
     li {
-      width: 250px;
+      min-width: 200px;
       display: flex;
       align-items: center;
       gap: 15px;
@@ -31,6 +31,7 @@ export const Container = styled.aside`
 
         p, i {
           color: var(--text);
+          font-size: 13px;
         }
       }
     }

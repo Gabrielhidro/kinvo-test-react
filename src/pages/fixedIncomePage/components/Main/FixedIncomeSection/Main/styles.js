@@ -10,6 +10,9 @@ export const Container = styled.section`
 `
 
 export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 9px;
 
   border: 1px solid #DAE0E3;
@@ -34,15 +37,15 @@ export const Content = styled.div`
 
   .content {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     margin-top: 10px;
 
     h3 {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: normal;
       color: var(--text-400);
-      width: 50%;
+      width: 60%;
     }
 
     > div {
@@ -65,7 +68,7 @@ export const Content = styled.div`
   .results-content {
     display: flex;
     margin-top: 20px;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 
     p {

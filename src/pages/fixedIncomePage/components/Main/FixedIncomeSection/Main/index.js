@@ -1,15 +1,11 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { Container, Content } from "./styles";
 import { infoImg } from '../../../../../../shared/assets/img'
 import { useSearch } from "../../../../../../context";
+import { formPercent, formNotCurrency } from "../../../../../../utils/formats";
 
 export function Main(){
 
-  const { search, order, handleSort, data } = useSearch()
-  const ord =  (a, b) => { return a.fixedIncome.name > b.fixedIncome.name ? 1 : -1; }
-
-  // const filteredProducts = data.filter((e) => e.fixedIncome.name.toUpperCase().includes(search.toUpperCase())).sort(order)
+  const { search, handleSort, data } = useSearch()
   const filteredProducts = data.filter((e) => e.fixedIncome.name.toUpperCase().includes(search.toUpperCase())).sort(handleSort);
 
   return(
@@ -35,10 +31,10 @@ export function Main(){
               <img src={infoImg} alt="" />
             </div>
             <div className="results-content">
-              <div><p>VALOR INVES.</p><h3>{item.position.valueApplied}</h3></div>
-              <div><p>SALDO BRUTO</p><h3>{item.position.equity}</h3></div>
-              <div><p>RENT</p><h3>{item.position.profitability}</h3></div>
-              <div><p>% DA CART.</p><h3>{item.position.portfolioPercentage}</h3></div>
+              <div><p>VALOR INVES.</p><h3>{formNotCurrency(item.position.valueApplied)}</h3></div>
+              <div><p>SALDO BRUTO</p><h3>{formNotCurrency(item.position.equity)}</h3></div>
+              <div><p>RENT</p><h3>{formPercent(item.position.profitability / 100)}</h3></div>
+              <div><p>% DA CART.</p><h3>{formPercent(item.position.portfolioPercentage / 100)}</h3></div>
               <div><p>CDI</p><h3>{item.position.indexerValue}</h3></div>
               <div><p>SOBRE CDI</p><h3>{item.position.percentageOverIndexer}</h3></div>
             </div>
