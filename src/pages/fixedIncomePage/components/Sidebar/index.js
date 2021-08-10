@@ -1,4 +1,5 @@
 // Images
+import { useState } from 'react';
 import { 
 resumeImg,
 productsImg,
@@ -13,7 +14,10 @@ from '../../../../shared/assets/img/index'
 // Styles
 import { Container } from "./styles";
 
+
 export function Sidebar (){
+  const [ isOpen, setIsOpen ] = useState(false)  
+  
   return(
     <Container>
       <ul>
@@ -40,22 +44,22 @@ export function Sidebar (){
             <i className="fas fa-chevron-right"></i>
           </div>
         </li>
-
-        <li className="dropdown">
-            <img src={classesImg} alt=""/>
-            <div>
-              <p>Classe <br />De Ativos</p>
-              <i className="fas fa-chevron-right"></i>
-            </div>
-          {/* <div class="dropdown-content">
-            <ul>
-              <li><a href="#">Ação</a></li>
-              <li><a href="#">Fundo</a></li>
-              <li><a href="#">Fundo Imobiliário</a></li>
-              <li onclick="showContent()"><a href="#">Fundo Renda Fixa</a></li>
-            </ul>
-          </div> */}
-        </li>
+        
+        <div className="dropdown" onClick={() =>  setIsOpen(value => !value)}>
+          <img src={classesImg} alt=""/>
+          <div>
+            <p>Classe <br />De Ativos</p>
+            <i className="fas fa-chevron-right"></i>
+          </div>
+        </div>
+        <div className={`drop-content ${isOpen ? 'active' : '' }`} >
+          <ul>
+            <li><a href="#">Ação</a><i className="fas fa-chevron-right"></i></li>
+            <li><a href="#">Fundo</a><i className="fas fa-chevron-right"></i></li>
+            <li><a href="#">Fundo Imobiliário</a><i className="fas fa-chevron-right"></i></li>
+            <li><a href="#">Fundo Renda Fixa</a><i className="fas fa-chevron-right"></i></li>
+          </ul>
+        </div>
 
         <li>
           <img src={realRentImg} alt=""/>

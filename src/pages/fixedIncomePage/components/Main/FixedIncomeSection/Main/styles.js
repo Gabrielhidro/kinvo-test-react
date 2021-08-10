@@ -102,3 +102,33 @@ export const Content = styled.div`
   }
 `
 
+export const PaginationButtons = styled.div `
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 15px;
+
+    button {
+      padding: 8px 12px;
+
+
+      border-radius: 5px;
+      border: 1px solid var(--white-600);
+
+      background: white;
+      color: var(--text);
+
+      &:disabled {
+        filter: opacity(0.7);
+        cursor: not-allowed;
+      }
+
+    }
+
+    .active {
+      background: var(--text);
+      color: white;
+    }
+`
+

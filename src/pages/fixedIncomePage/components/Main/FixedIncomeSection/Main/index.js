@@ -1,5 +1,5 @@
-import { Container, Content } from "./styles";
-import { infoImg } from '../../../../../../shared/assets/img'
+import { Container, Content, PaginationButtons } from "./styles";
+import { infoImg, rightPagImg, leftPagImg } from '../../../../../../shared/assets/img'
 import { useSearch } from "../../../../../../context";
 import { formPercent, formNotCurrency } from "../../../../../../utils/formats";
 
@@ -51,6 +51,12 @@ export function Main(){
           </Content>
         </Container>
       ))}
+      <PaginationButtons>
+        <button disabled><img src={leftPagImg} alt="" /></button>
+        <button disabled className="active">1</button>
+        <button disabled>2</button>
+        <button disabled><img src={rightPagImg} alt="" /></button>
+      </PaginationButtons>
     </>
   )
 }

@@ -16,3 +16,6 @@ export { default as  fgcImg } from './fgc.svg'
 
 export { default as  infoImg } from './info.svg'
 export { default as  searchImg } from './search.svg'
+
+export { default as  leftPagImg } from './pagination-left.svg'
+export { default as  rightPagImg } from './pagination-right.svg'

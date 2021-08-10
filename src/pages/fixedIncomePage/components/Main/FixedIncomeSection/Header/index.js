@@ -4,7 +4,7 @@ import { useSearch } from "../../../../../../context";
 
 export function Header (){
 
-  const { order, search, handleSearch, handleOrder } = useSearch()
+  const { search, handleSearch, handleOrder } = useSearch()
 
   return (
     <Container>
