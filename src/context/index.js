@@ -6,7 +6,7 @@ export const searchContext = createContext('')
 export const SearchProvider = ({children}) => {
 
   const [ search, setSearch ] = useState('');
-  const [ order, setOrder ] = useState('a');
+  const [ order, setOrder ] = useState('');
   const [ data, setData ] = useState([])
   
   useEffect(() => {

@@ -25,13 +25,13 @@ export const Container = styled.header`
         
         p {
           color: var(--text-200);
-          font-size: 12px;
+          font-size: 9px;
           font-weight: regular;
         }
 
         h2 {
-          color: var(--text-400);
-          font-size: 16px; 
+          color: var(--text-200);
+          font-size: 14px; 
           font-weight: bold;
         }
       }

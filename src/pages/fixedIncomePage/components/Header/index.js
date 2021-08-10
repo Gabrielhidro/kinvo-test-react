@@ -13,32 +13,32 @@ export function Header(){
         <div>
           <img src={totalImg} alt="" />
           <div>
-            <p>Saldo bruto</p>
-            <h2>130.908.332,09</h2>
+            <p>SALDO BRUTO</p>
+            <h2>130.521.232,02</h2>
           </div>
         </div>
 
         <div>
           <img src={arrowUpImg} alt="" />
           <div>
-            <p>Saldo bruto</p>
-            <h2>130.908.332,09</h2>
+            <p>VALOR APLICADO</p>
+            <h2>521.230,02</h2>
           </div>
         </div>
 
         <div>
           <img src={rentImg} alt="" />
           <div>
-            <p>Saldo bruto</p>
-            <h2>130.908.332,09</h2>
+            <p>RENTABILIDADE</p>
+            <h2>2,34%</h2>
           </div>
         </div>
 
         <div>
           <img src={arrowDownImg} alt="" />
           <div>
-            <p>Saldo bruto</p>
-            <h2>130.908.332,09</h2>
+            <p>CARTEIRA</p>
+            <h2>MINHA CARTEIRA</h2>
           </div>
         </div>
 
