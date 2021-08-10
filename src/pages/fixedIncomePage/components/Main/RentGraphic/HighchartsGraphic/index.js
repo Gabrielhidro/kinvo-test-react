@@ -3,6 +3,7 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 const options = {
+  
   series: [
     {
       name: 'Profit',

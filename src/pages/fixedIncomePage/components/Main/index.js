@@ -2,6 +2,7 @@ import { FixedIncomeCards } from "./FixedIncomeCards";
 import { Container } from "./styles";
 import { RentGraphic } from "./RentGraphic";
 import { FixedIncomeSection } from "./FixedIncomeSection";
+import { WalletTypesGraphics } from "./WalletTypesGraphics";
 
 export function Main(){
 
@@ -11,6 +12,7 @@ export function Main(){
       <FixedIncomeCards />
       <RentGraphic />
       <FixedIncomeSection />
+      <WalletTypesGraphics />
     </Container>
   )
 }
